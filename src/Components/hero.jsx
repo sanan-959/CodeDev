@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import CustomModal from "./Modal";
+import Form from 'react-bootstrap/Form';
 
 
 const HeroSection = ()=>{
@@ -14,13 +15,19 @@ const HeroSection = ()=>{
     }
     return(
         <div className="bg-dark">
-            <CustomModal show={showModal} handleClose={handleClose} title='My Modal' onSave={handleSave}>
-                <p>My Name is Sanan Nawaz</p>
+            <CustomModal show={showModal} handleClose={handleClose} title='Registration' onSave={handleSave}>
+                <form>
+                    <Form.Control type="text" placeholder="Name" />
+                    <br />
+                    <Form.Control type="email" placeholder="Email" />
+                    <br />
+                    <Form.Control type="tel" placeholder="Phone"/>
+                </form>
             </CustomModal>
             <Container className="bg-dark text-white">
             <div className="row py-5 align-items-center ">
                 <div className="col-12 col-md-6">
-                    <h2>Become a <span>Web Developer</span></h2>
+                    <h2>Become a <span className="text-warning">Web Developer</span></h2>
                     <p className="py-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae. Repellendus exercitationem nisi beatae quam placeat necessitatibus, tenetur ut ipsa id itaque esse maiores temporibus quidem alias atque, illo culpa.</p>
                     <button className="btn btn-primary" onClick={handleOpen}>Start the Enrollment</button>
                 </div>
