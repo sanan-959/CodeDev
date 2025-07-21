@@ -10,7 +10,7 @@ const CustomNavbar = ()=>{
     return(
         <Navbar expand='lg' className="bg-dark">
             <Container>
-                <Navbar.Brand href="#home" className="text-white">Frontend Bootcamp</Navbar.Brand>
+                <Navbar.Brand href="#home" className="text-white">Code Dev</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className="text-white"/>
                       <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">

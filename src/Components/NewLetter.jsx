@@ -9,7 +9,7 @@ const NewsLetter = () => {
         <div className="bg-primary">
             <Container>
                 <div className="row py-5 align-items-center justify-content-center">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6 pb-3 pb-md-0">
                         <h3 className="text-white">Sign Up For Our Newsletter</h3>
                     </div>
                     <div className="col-12 col-md-6">

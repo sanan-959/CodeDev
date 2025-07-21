@@ -31,7 +31,7 @@ const HeroSection = ()=>{
                     <p className="py-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae. Repellendus exercitationem nisi beatae quam placeat necessitatibus, tenetur ut ipsa id itaque esse maiores temporibus quidem alias atque, illo culpa.</p>
                     <button className="btn btn-primary" onClick={handleOpen}>Start the Enrollment</button>
                 </div>
-                <div className="col-12 col-md-6 py-5 py-md-0">
+                <div className="col-12 col-md-6 pt-5 pb-0 py-md-0">
                     <figure>
                         <img className="img-fluid" src="https://static.vecteezy.com/system/resources/thumbnails/011/153/363/small_2x/3d-web-developer-working-on-project-illustration-png.png" alt="" />
                     </figure>

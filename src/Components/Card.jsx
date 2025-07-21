@@ -1,32 +1,51 @@
-// import React, { useEffect, useState } from "react";
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-import React, { useEffect, useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+
+import { Card, Button, Container } from 'react-bootstrap';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 const CradPage =()=> {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(data => setProducts(data))
-      .catch(err => console.error("Fetch error:", err));
-  }, []);
 
   return (
-    <div className="d-flex flex-wrap gap-3 p-3">
-      {products.map(product => (
-        <Card key={product.id} style={{ width: '18rem' }} className='mx-auto'>
-          <Card.Img variant="top" src={product.image} height="200" style={{ objectFit: 'contain' }} />
-          <Card.Body>
-            <Card.Title>{product.title}</Card.Title>
-            <Card.Text>${product.price}</Card.Text>
-            <Button variant="primary">Buy</Button>
-          </Card.Body>
-        </Card>
-      ))}
-    </div>
+    <Container>
+      <div className='row py-5 '>
+        <div className='col-12 col-sm-6 col-lg-4 pb-3 pb-lg-0'>
+          <Card className='bg-dark text-white'>
+            <div className='mt-3 d-flex justify-content-center'>
+              <i className="bi bi-laptop fs-1"></i>
+            </div>
+            <Card.Body className='d-flex flex-column justify-content-center align-items-center text-center'>
+              <Card.Title>Virtual</Card.Title>
+              <Card.Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae. Repellendus exercitationem nisi beatae quam placeat necessitatibus, tenetur ut ipsa id itaque esse maiores temporibus quidem alias atque, illo culpa.</Card.Text>
+              <Button variant='primary'>Read More</Button>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className='col-12 col-sm-6 col-lg-4 pb-3 pb-lg-0'>
+          <Card className='bg-secondary text-white'>
+            <div className='mt-3 d-flex justify-content-center'>
+              <i className="bi bi-person-bounding-box fs-1"></i>
+            </div>
+            <Card.Body className='d-flex flex-column justify-content-center align-items-center text-center'>
+              <Card.Title>Hybrid</Card.Title>
+              <Card.Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae. Repellendus exercitationem nisi beatae quam placeat necessitatibus, tenetur ut ipsa id itaque esse maiores temporibus quidem alias atque, illo culpa.</Card.Text>
+              <Button variant='dark'>Read More</Button>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className='col-12 col-sm-6 col-lg-4 pb-3 pb-lg-0'>
+          <Card className='bg-dark text-white'>
+            <div className='mt-3 d-flex justify-content-center'>
+              <i className="bi bi-person fs-1"></i>
+            </div>
+            <Card.Body className='d-flex flex-column justify-content-center align-items-center text-center'>
+              <Card.Title>In Person</Card.Title>
+              <Card.Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae. Repellendus exercitationem nisi beatae quam placeat necessitatibus, tenetur ut ipsa id itaque esse maiores temporibus quidem alias atque, illo culpa.</Card.Text>
+              <Button variant='primary'>Read More</Button>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+    </Container>
   );
 }
 
