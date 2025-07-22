@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'leaflet/dist/leaflet.css';
 
 // Import Components
 import CustomNavbar from './Components/Navbar'; 
@@ -11,6 +12,10 @@ import CradPage from './Components/Card';
 import FundamantelPage from './Components/FundamantelSection';
 import ReactPage from './Components/ReactSection';
 import QuestionPage from './Components/QuestionSection';
+import TeacherSection from './Components/TeacherSection';
+import FooterSection from './Components/FooterSection';
+import MapComponent from './Components/Map';
+
 
 function App() {
 
@@ -23,6 +28,9 @@ function App() {
     <FundamantelPage/>
     <ReactPage/>
     <QuestionPage/>
+    <TeacherSection/>
+    <MapComponent/>
+    <FooterSection/>
     </>
   );
 }
